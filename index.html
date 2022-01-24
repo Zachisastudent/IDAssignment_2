@@ -58,10 +58,12 @@
         <i class='bx bx-menu sidebarBtn'></i>
         <span class="dashboard">Dashboard</span>
       </div>
+      <!--
       <div class="search-box">
         <input type="text" placeholder="Search...">
-        <i class='bx bx-search' ></i>
+        <i class='bx bx-search'id="searchButton" ></i>
       </div>
+    -->
       <div class="profile-details">
         <!--<img src="images/profile.jpg" alt="">-->
         <span class="admin_name">Name of user</span>
@@ -116,8 +118,28 @@
           
         </div>
       </div>
+      <!-- insertion for API here -->
+      <div class="section-description">
+        <p class="section-subheading">
+          <form id="query-form">
+            <div>
+              <label for="ingredients">Country :</label>
+              <br>
+              <input class="textfield" id="ingredients" type="text" name="ingredients" placeholder="e.g.India,chiNA" onChange="sanitizeInputs()" />
+            </div>
+            
+            <div class="button">
+              <br />
+              <input class="button" type="button" value="Reset" id="resetButton" onClick="this.form.reset();resetResults()" />
+              <input class="button" type="submit" value="Search ..." id="searchButton" />
+            </div>
+          </form>
+        </p>
+      
+      <div class="section-subheading" id="search-results-heading"></div>
+      <div class="results-div" id="results"></div>
 
-      <div class="sales-boxes">
+      <div class="dashboard-boxes">
         <div class="recent-sales box">
           <div class="title">Dashboard</div>
           <div class="sales-details">
@@ -138,7 +160,7 @@
           </div>
           
         </div>
-        <div class="top-sales box">
+        <div class="newsfeed box">
           <div class="title">NewsFeed</div>
           <ul class="top-sales-details">
             
@@ -159,8 +181,9 @@ sidebarBtn.onclick = function() {
   sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 }
  </script>
-
 </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src = "scripts.js"></script>
 </html>
 
 
