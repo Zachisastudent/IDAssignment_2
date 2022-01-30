@@ -124,7 +124,7 @@ function setFormDisabledProps(statusToSet) {
     document.getElementById("searchButton").disabled = statusToSet;
 }
 function setNotFoundMessages() {
-  $("#search-results-heading").text("Dont Fun With it.Please Enter Correct Country Name e.g-India");
+  $("#search-results-heading").text("Enter Country Name e.g-India");
   $("#results").text("");
 }
 
